@@ -6,7 +6,6 @@ import { replaceLocale } from '@/locale';
 import { deepCopy, arrayMove } from '@/core/utils';
 import { specialCoList } from '@/core/utils/special';
 
-
 import {
 	DeleteOutlined,
 	EyeInvisibleOutlined,
@@ -25,7 +24,6 @@ import {
 	TimeLineItemMouseOver,
 	resetCurrentMoveItemId,
 } from './timelineItem';
-
 
 import type UserConfig from '@/config';
 import type { IBlockType, IStoreData } from '@/core/store/storetype';
@@ -154,15 +152,17 @@ const SortableItem = SortableElement<SortableElementProps>((props: SortableEleme
 	);
 });
 
-const SortableList = SortableContainer<SortableContainerProps>(({ items }: SortableContainerProps) => {
-	return (
-		<div>
-			{items.data.map((value, index: number) => (
-				<SortableItem key={value.id} index={index} value={{ value, config: items.config }} />
-			))}
-		</div>
-	);
-});
+const SortableList = SortableContainer<SortableContainerProps>(
+	({ items }: SortableContainerProps) => {
+		return (
+			<div>
+				{items.data.map((value, index: number) => (
+					<SortableItem key={value.id} index={index} value={{ value, config: items.config }} />
+				))}
+			</div>
+		);
+	}
+);
 
 let cacheBlock: IBlockType[] = [];
 

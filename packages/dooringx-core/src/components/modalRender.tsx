@@ -6,7 +6,6 @@ import UserConfig from '@/config';
 import { deepCopy } from '@/core/utils';
 import { IStoreData } from '@/core/store/storetype';
 
-
 interface ModalRenderProps {
 	data: IStoreData;
 	name: string; //传递的modal名字

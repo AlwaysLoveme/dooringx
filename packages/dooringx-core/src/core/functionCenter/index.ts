@@ -5,7 +5,6 @@ import type UserConfig from '@/config';
 import type { FunctionConfigType } from './config';
 import type { EventCenterMapItem, EventCenterUserSelect } from '../eventCenter';
 
-
 /**
  *
  * ctx可在事件链中传递，函数完成后调用next执行下一个函数

@@ -34,8 +34,13 @@
 		"noEmit": true,
 		"paths": {
 			"@/*": ["./src/*"]
-		}
+		},
+		"plugins": [
+			{
+				"name": "tsc-alias"
+			}
+		]
 	},
-	"include": ["src/**/*", "types", "typings.d.ts", "dist"],
+	"include": ["src/**/*", "types", "typings.d.ts"],
 	"exclude": ["node_modules"]
 }

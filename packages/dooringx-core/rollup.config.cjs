@@ -55,17 +55,17 @@ export default defineConfig({
 	output: [
 		{
 			format: 'es',
-			sourcemap: true,
+			sourcemap: env === 'development',
 			file: 'dist/index.js',
 		},
 		{
 			format: 'cjs',
-			sourcemap: true,
+			sourcemap: env === 'development',
 			file: 'dist/dooringx-core.cjs.js',
 		},
 		{
 			format: 'esm',
-			sourcemap: true,
+			sourcemap: env === 'development',
 			file: 'dist/dooringx-core.esm.js',
 		},
 	],

@@ -4,7 +4,6 @@ import style from '../../index.less';
 
 import type { IStoreData } from '../store/storetype';
 
-
 import type UserConfig from '@/config';
 
 export interface SelectDataProps {

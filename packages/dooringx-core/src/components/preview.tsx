@@ -90,9 +90,9 @@ function Preview(props: PreviewProps): ReactElement {
 							s.src = v;
 							document.body.appendChild(s);
 							s.onload = () => {
-								const item = window[
+								const item = (window[
 									props.config.SCRIPTGLOBALNAME as any
-								] as unknown as ComponentItemFactory;
+								] as unknown) as ComponentItemFactory;
 								try {
 									props.config.registComponent(item);
 								} catch {

@@ -2,9 +2,9 @@ import React, { useState, memo } from 'react';
 import { Modal, Form, InputNumber, Radio, Select } from 'antd';
 
 import ColorPicker from '../colorPicker';
-import { UserConfig } from '../../config/index';
-import { rgba2Obj } from '../../core/utils/index';
-import { replaceLocale, zhCN } from '../../locale';
+import { UserConfig } from '@/config/index';
+import { rgba2Obj } from '@/core/utils/index';
+import { replaceLocale, zhCN } from '@/locale';
 
 import type { MessageInstance } from 'antd/lib/message/interface';
 

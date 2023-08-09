@@ -5,7 +5,6 @@ import { marklineConfig } from './marklineConfig';
 import type UserConfig from '@/config';
 import type { IBlockType } from '../store/storetype';
 
-
 export function gridModeDisplay(left: number, top: number, focus: IBlockType, config: UserConfig) {
 	// 有吸附走吸附，只吸top和left，宽高不需要
 	// 无吸附拖拽时显示所有网格。

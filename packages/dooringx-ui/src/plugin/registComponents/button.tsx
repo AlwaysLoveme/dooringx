@@ -15,8 +15,12 @@ import {
 	useDynamicAddEventCenter,
 	useRegistFunc,
 } from 'dooringx-core';
-import { FormMap } from '../formTypes';
-import { ComponentRenderConfigProps } from 'dooringx-core/dist/core/components/componentItem';
+
+import theme from '@/styles/var.module.less';
+
+import type { FormMap } from '../formTypes';
+import type { ComponentRenderConfigProps } from 'dooringx-core/dist/core/components/componentItem';
+
 function ButtonTemp(pr: ComponentRenderConfigProps) {
 	const props = pr.data.props;
 	const eventCenter = useMemo(() => {
@@ -105,7 +109,7 @@ const MButton = new ComponentItemFactory(
 			createPannelOptions<FormMap, 'input'>('input', {
 				receive: 'backgroundColor',
 				label: ' 按钮背景',
-				type: 'color'
+				type: 'color',
 			}),
 		],
 		fn: [
@@ -119,11 +123,11 @@ const MButton = new ComponentItemFactory(
 	},
 	{
 		props: {
-			text: 'yehuozhili',
+			text: '按钮',
 			sizeData: [100, 30],
-			backgroundColor: 'rgba(0,132,255,1)',
+			backgroundColor: theme.colorPrimary,
 			lineHeight: 1,
-			borderRadius: 0,
+			borderRadius: 4,
 			op1: false,
 			borderData: {
 				borderWidth: 0,

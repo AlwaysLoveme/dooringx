@@ -1,12 +1,5 @@
-/*
- * @Author: yehuozhili
- * @Date: 2021-02-25 21:16:58
- * @LastEditors: yehuozhili
- * @LastEditTime: 2022-04-29 23:23:42
- * @FilePath: \dooringx\packages\dooringx-core\src\config\index.tsx
- */
+import React from 'react';
 import { VerticalAlignMiddleOutlined } from '@ant-design/icons';
-import React, { ComponentClass, FunctionComponent, ReactNode } from 'react';
 
 import { deepCopy } from '@/core/utils';
 import CommanderWrapper from '@/core/command';
@@ -36,6 +29,7 @@ import {
 
 import type { CommanderItem } from '@/core/command/commanderType';
 import type { LeftRegisterComponentMapItem } from '@/core/crossDrag';
+import type { ComponentClass, FunctionComponent, ReactNode } from 'react';
 import type { IBlockType, IMainStoreData, IStoreData } from '@/core/store/storetype';
 
 // 组件部分

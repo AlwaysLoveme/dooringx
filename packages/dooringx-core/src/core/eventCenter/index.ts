@@ -1,11 +1,11 @@
 import Store from '../store';
 import { EventQuene } from './eventQuene';
 import { IStoreData } from '../store/storetype';
+import { FunctionCenter } from '../functionCenter';
 
 import type UserConfig from '@/config';
+import type { FunctionCenterType } from '../functionCenter';
 import type { FunctionDataType } from '../functionCenter/config';
-import { FunctionCenter, type FunctionCenterType } from '../functionCenter';
-
 
 // 每个组件制作时可以抛出多个事件，事件名为id+自定义name，
 // 每个组件可以抛出多个函数，存在函数中心

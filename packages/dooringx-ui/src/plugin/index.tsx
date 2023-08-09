@@ -1,18 +1,11 @@
-/*
- * @Author: yehuozhili
- * @Date: 2021-02-27 21:33:36
- * @LastEditors: yehuozhili
- * @LastEditTime: 2022-04-29 23:35:58
- * @FilePath: \dooringx\packages\dooringx-example\src\plugin\index.tsx
- */
-
 import { InitConfig, LeftDataPannel } from 'dooringx-core';
 import { LeftRegisterComponentMapItem } from 'dooringx-core/dist/core/crossDrag';
 import { ContainerOutlined, PlayCircleOutlined, HighlightOutlined } from '@ant-design/icons';
-import commandModules from './commanderModules';
+
 import { functionMap } from './functionMap';
-import { Formmodules } from './formComponentModules';
-import InputCo from './registComponents/inputCo';
+import commandModules from './commanderModules';
+import { FormModules } from './formComponentModules';
+import InputComponent from './registComponents/inputCo';
 
 const LeftRegistMap: LeftRegisterComponentMapItem[] = [
 	{
@@ -68,7 +61,7 @@ export const defaultConfig: Partial<InitConfig> = {
 		},
 	],
 	initComponentCache: {
-		input: { component: InputCo },
+		input: { component: InputComponent },
 	},
 	rightRenderListCategory: [
 		{
@@ -106,7 +99,7 @@ export const defaultConfig: Partial<InitConfig> = {
 	],
 	initFunctionMap: functionMap,
 	initCommandModule: commandModules,
-	initFormComponents: Formmodules,
+	initFormComponents: FormModules,
 };
 
 export default defaultConfig;

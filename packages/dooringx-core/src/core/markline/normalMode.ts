@@ -3,7 +3,6 @@ import { marklineConfig } from './marklineConfig';
 
 import type { IBlockType } from '../store/storetype';
 
-
 export interface RealStyle {
 	width: number;
 	height: number;

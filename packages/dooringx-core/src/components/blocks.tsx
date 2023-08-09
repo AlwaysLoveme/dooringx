@@ -1,4 +1,11 @@
-import React, { CSSProperties, PropsWithChildren, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+	CSSProperties,
+	PropsWithChildren,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from 'react';
 
 import { UserConfig } from '@/config';
 import { transfer } from '@/core/transfer';

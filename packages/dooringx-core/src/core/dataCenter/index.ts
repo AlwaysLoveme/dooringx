@@ -2,7 +2,6 @@ import { IStoreData } from '../store/storetype';
 
 import type UserConfig from '@/config';
 
-
 /**
  *
  * 用来管理页面数据，包括全局数据，做全局设置变量时可以加上

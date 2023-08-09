@@ -6,8 +6,14 @@
  * @FilePath: \dooringx\packages\dooringx-core\src\components\rightConfig.tsx
  */
 import { Tabs, Input, Row, Col, Checkbox, InputNumber } from 'antd';
-import React, { CSSProperties, PropsWithChildren, ReactNode, useEffect, useMemo, useState } from 'react';
-
+import React, {
+	CSSProperties,
+	PropsWithChildren,
+	ReactNode,
+	useEffect,
+	useMemo,
+	useState,
+} from 'react';
 
 import UserConfig from '@/config';
 import { replaceLocale } from '@/locale';

@@ -21,7 +21,8 @@ docs-dist
 .DS_Store
 
 # ide
-.vscode
+.vscode/*
+!.vscode/settings.json
 .idea
 
 .env

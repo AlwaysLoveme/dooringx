@@ -5,7 +5,6 @@ import { switchMarklineResizeDisplay } from './normalMode';
 import type UserConfig from '@/config';
 import type { LinesTypes } from './calcRender';
 
-
 export function resizeCurrentCalculate(lines: LinesTypes, config: UserConfig) {
 	const id = resizeState.item?.id;
 

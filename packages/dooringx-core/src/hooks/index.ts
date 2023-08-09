@@ -13,7 +13,6 @@ import { ComponentRenderConfigProps } from '../core/components/componentItem';
 
 import type UserConfig from '../config';
 
-
 export function useStoreState(
 	config: UserConfig,
 	extraFn: Function = () => {},

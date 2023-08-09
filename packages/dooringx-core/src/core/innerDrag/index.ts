@@ -21,7 +21,6 @@ import { wrapperMoveMouseUp as iframeWrapperMove } from '../../components/Iframe
 import type UserConfig from '@/config';
 import type { IBlockType } from '../store/storetype';
 
-
 export const innerDrag = function (
 	item: IBlockType,
 	ref: RefObject<HTMLDivElement>,

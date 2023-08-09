@@ -7,7 +7,6 @@ import styles from '../../index.less';
 import type UserConfig from '@/config';
 import type { IBlockType, IStoreData } from '../store/storetype';
 
-
 interface rotateStateType {
 	startX: number;
 	startY: number;

@@ -7,6 +7,7 @@
     "build": "max build",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
+    "prepare": "max setup",
     "test:coverage": "umi-test --coverage"
   },
   "gitHooks": {
@@ -21,14 +22,16 @@
     ]
   },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@ant-design/icons": "^4.6.2",
     "@umijs/preset-react": "1.x",
     "animate.css": "^4.1.1",
     "dooringx-core": "workspace:^"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.7",
     "@umijs/fabric": "^4.0.1",
     "@umijs/lint": "^4.0.74",
     "@umijs/max": "^4.0.74",
