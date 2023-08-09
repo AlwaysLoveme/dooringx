@@ -12,16 +12,16 @@ const execSync = require('child_process').execSync;
 const root = process.cwd();
 execSync('npm run changelog');
 execSync('npm run translate');
-const rootPath = path.resolve(root, 'packages', 'dooringx-lib');
+const rootPath = path.resolve(root, 'packages', 'dooringx-core');
 const templatePath = path.resolve(root, 'packages', 'dooringx-plugin-template');
 const templateJsonPath = path.resolve(templatePath, 'template', 'template.json');
 const templatePkgPath = path.resolve(templatePath, 'package.json');
 const readme = path.resolve(root, 'README.md');
-const libreadme = path.resolve(root, 'packages', 'dooringx-lib', 'README.md');
-const libPkgPath = path.resolve(root, 'packages', 'dooringx-lib', 'package.json');
+const libreadme = path.resolve(root, 'packages', 'dooringx-core', 'README.md');
+const libPkgPath = path.resolve(root, 'packages', 'dooringx-core', 'package.json');
 fs.removeSync(libreadme);
 fs.copyFileSync(readme, libreadme);
-const res = execSync('npm view dooringx-lib version');
+const res = execSync('npm view dooringx-core version');
 const version = res.toString().replace('\n', '');
 const libpkgVersion = JSON.parse(fs.readFileSync(libPkgPath).toString()).version;
 console.log('npm version is' + version);
@@ -31,7 +31,7 @@ if (version === libpkgVersion) {
 }
 //同步template
 const templatejson = JSON.parse(fs.readFileSync(templateJsonPath).toString());
-templatejson.devDependencies['dooringx-lib'] = '^' + libpkgVersion;
+templatejson.devDependencies['dooringx-core'] = '^' + libpkgVersion;
 fs.removeSync(templateJsonPath);
 fs.writeFileSync(templateJsonPath, JSON.stringify(templatejson, null, 2));
 const templatePkgJson = JSON.parse(fs.readFileSync(templatePkgPath).toString());

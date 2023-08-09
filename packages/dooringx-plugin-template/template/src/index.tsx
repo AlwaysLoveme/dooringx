@@ -7,7 +7,7 @@
  */
 import React from "react";
 import styles from "./index.less";
-import { ComponentItemFactory, createPannelOptions } from "dooringx-lib";
+import { ComponentItemFactory, createPannelOptions } from "dooringx-core";
 export interface FormBaseType {
 	receive?: string;
 }

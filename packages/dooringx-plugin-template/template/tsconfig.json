@@ -38,7 +38,7 @@
 			"*": ["*", "src/*"]
 		}
 	},
-	"include": ["src/**/*", "node_modules/dooringx-lib/**/*"],
+	"include": ["src/**/*", "node_modules/dooringx-core/**/*"],
 	"exclude": [
 		"coverage",
 		"config",

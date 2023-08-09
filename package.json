@@ -1,34 +1,29 @@
 {
 	"name": "root",
-	"workspaces": [
-		"packages/*"
-	],
+	"private": true,
 	"scripts": {
-		"start": "lerna exec npm run start --scope=dooringx-lib",
-		"start:example": "lerna exec npm run start --scope=dooringx-example",
-		"start:doc": "lerna exec npm run start --scope=dooringx-dumi-doc",
-		"build": "lerna exec npm run build --scope=dooringx-lib",
-		"deploy": "lerna exec npm run docs:build --scope=dooringx-dumi-doc",
-    "build:cli":"lerna exec npm run build --scope=dooringx-cli",
+		"start": "pnpm --filter=dooringx-core start",
+		"start:ui": "pnpm --filter=dooringx-ui start",
+		"start:doc": "pnpm --filter=dooringx-doc start",
+		"build": "pnpm --filter=dooringx-core build ",
+		"deploy": "pnpm --filter=dooringx-doc docs:build ",
+    "build:cli":"pnpm --filter=dooringx-cli build ",
 		"pub": "node ./script/publish.js",
+		"prepare": "npx husky install",
 		"changelog": "node ./script/changelog.js",
 		"translate": "node ./script/translate.js",
 		"translateText": "node ./script/translateText.js"
 	},
-	"private": true,
 	"devDependencies": {
 		"@types/md5": "^2.3.1",
 		"axios": "^0.24.0",
 		"dotenv": "^10.0.0",
 		"fs-extra": "^10.0.0",
-		"husky": "4.3.0",
-		"lerna": "^3.22.1",
+		"husky": "^7.0.4",
 		"lint-staged": "^11.0.0",
 		"md5": "^2.3.0",
 		"prettier": "^2.2.0",
-		"rimraf": "^3.0.2",
-		"tslib": "^2.1.0",
-		"typescript": "^4.1.3"
+		"rimraf": "^3.0.2"
 	},
 	"husky": {
 		"hooks": {
@@ -37,14 +32,9 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,tsx,ts,less,md,json}": [
-			"npx prettier --write ./packages/dooringx-dumi-doc/docs ./packages/dooringx-lib/src",
+			"npx prettier --write ./packages/dooringx-doc/docs ./packages/dooringx-core/src",
 			"git add ."
 		]
 	},
-	"dependencies": {},
-  "resolutions": {
-    "**/@typescript-eslint/eslint-plugin": "^4.11.1",
-    "**/@typescript-eslint/parser": "^4.11.1",
-    "**/typescript": "^4.1.3"
-  }
+	"dependencies": {}
 }
