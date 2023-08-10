@@ -1,10 +1,3 @@
-/*
- * @Author: yehuozhili
- * @Date: 2022-04-23 17:03:36
- * @LastEditors: yehuozhili
- * @LastEditTime: 2022-04-23 17:03:37
- * @FilePath: \dooringx\packages\dooringx-core\src\core\store\createModal.ts
- */
 import { createUid } from '../utils';
 
 import type { IStoreData } from './storetype';

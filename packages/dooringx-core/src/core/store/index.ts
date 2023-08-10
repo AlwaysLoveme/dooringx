@@ -1,4 +1,4 @@
-import { deepCopy } from '../../core/utils';
+import { deepCopy } from '@/core/utils';
 import { createDefaultModalBlock } from './createModal';
 
 import type { IBlockType, IStoreData } from './storetype';
